@@ -1,0 +1,50 @@
+﻿	
+	
+	如何通过maven和cobertura，生成（单元测试覆盖率）报告
+	
+	ps 记得要下这个net.sourceforge.cobertura 而不是cobertura 1.9rc1 妈的坑爹啊，用了之后结果一直是0
+	
+	
+	参考的话
+	maven相关的指令：
+	http://mojo.codehaus.org/cobertura-maven-plugin/
+	
+	注意事项：
+	http://danlley.iteye.com/blog/102153
+	
+	Maven官方提供的Cobertura插件只支持标准的测试发布路径,即测试类和工程类分别src/main/java和src/test/java下,
+	正常配置的话就不用多管了
+	
+	
+	------------------------------------------------------------------
+	goal: cobertura:cobertura
+	pom.xml:
+	
+	
+	  <build>
+	  	<plugins>
+	  		<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>cobertura-maven-plugin</artifactId>
+	  			<version>2.5.1</version>
+	  		</plugin>
+	  	</plugins>
+	  </build>
+	
+	
+	  <dependencies>
+	    <dependency>
+	    	<groupId>junit</groupId>
+	    	<artifactId>junit</artifactId>
+	    	<version>4.10</version>
+	    	<type>jar</type>
+	    	<scope>compile</scope>
+	    </dependency>
+	    <dependency>
+	    	<groupId>net.sourceforge.cobertura</groupId>
+	    	<artifactId>cobertura</artifactId>
+	    	<version>1.9.4.1</version>
+	    	<type>jar</type>
+	    	<scope>compile</scope>
+	    </dependency>
+	  </dependencies>

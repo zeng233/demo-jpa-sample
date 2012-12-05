@@ -1,0 +1,18 @@
+
+@NamedNativeQuery(name="User.byNamedNativeQuery",
+	query="select * from xchen7129752.t_user where userid = '9527'")
+报错Pure native scalar queries are not yet supported	
+
+	
+	
+解决：
+---------------------------------------------	
+@NamedNativeQuery(name="User.byNamedNativeQuery",
+	query="select * from xchen7129752.t_user where userid = '9527'",resultClass=User.class)
+	
+	http://stackoverflow.com/questions/9762730/jpa-native-query-return-class
+
+	For NamedNativeQueries you can only use resultClass when the result actually maps to an Entity. 
+
+	
+	

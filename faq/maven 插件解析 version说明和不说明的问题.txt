@@ -1,0 +1,18 @@
+
+
+问题：如果这里不指定version会怎样
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<executions>
+		<execution></execution>
+	</executions>
+</plugin>
+
+
+Maven 2会自动下载该插件的最新版本，而这个版本可能是发布版如2.0,
+因此Maven 2常被人诟病的一点是它经常自动引入一些有问题的插件，导致构建的不稳定。
+
+Maven 3，如果用户不指定插件版本，Maven只会引入"最新的发布版本插件"，
+这样相对降低了引入问题插件的可能性，同时Maven 3还会给用户发出警告，提醒用户指定插件版本。 
+    		

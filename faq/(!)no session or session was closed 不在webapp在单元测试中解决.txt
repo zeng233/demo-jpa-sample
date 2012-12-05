@@ -1,0 +1,14 @@
+
+
+
+	添加 @Transactional ，对事务什么的处理
+	
+	
+	@RunWith(SpringJUnit4ClassRunner.class)
+	@Transactional
+	@ContextConfiguration(locations={"classpath:orm-jpa-context.xml"})
+	public class RoleDaoTest {
+	
+	
+		...
+	}

@@ -1,0 +1,9 @@
+	 Invalid NamespaceHandler class 
+	 [org.springframework.data.jpa.repository.config.Jpa RepositoryNameSpaceHandler] 
+	 for namespace
+	 
+	 我这里把3.1.3直接改成3.2.0.RC2
+	 
+	 http://forum.springsource.org/printthread.php?t=132111&pp=10&page=1
+	 --If you are using 3.1.3.RELEASE of spring, 
+	 	you will need to make sure that you are not using spring-tx-3.2.0.RC2.

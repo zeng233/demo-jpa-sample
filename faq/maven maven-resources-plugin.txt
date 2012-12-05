@@ -1,0 +1,35 @@
+
+	对maven项目资源进行处理,在不同的phase,对文件做出相应的操作
+
+	这里在validate阶段把
+	${basedir}/src/main/java/com/demo/mybatis/persistence
+	中的文件复制到
+	${basedir}/target/classes/com/demo/mybatis/persistence
+	
+<plugin>
+	<artifactId>maven-resources-plugin</artifactId>
+    <version>2.6</version>
+    <executions>
+  		<execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>validate</phase>
+            <goals>
+          		<goal>copy-resources</goal>
+            </goals>
+        	<configuration>
+          		<outputDirectory>${basedir}/target/classes/com/demo/mybatis/persistence</outputDirectory>
+              	<resources>          
+                	<resource>
+              			<directory>${basedir}/src/main/java/com/demo/mybatis/persistence</directory>
+                  		<includes>
+		          			<include>*.xml</include>
+				        </includes>
+	                  	<filtering>true</filtering>
+                	</resource>
+              	</resources>              
+        	</configuration>            
+  		</execution>
+  		
+    </executions>
+ </plugin>

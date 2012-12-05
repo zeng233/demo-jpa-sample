@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/data/jpa 
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	
+	<context:component-scan base-package="com.demo"/>
+	<!-- webapp默认目录配置 webapp/views/index.jsp -->
+	<mvc:view-controller path="/" view-name="index"/>
+	
+	<!-- 资源配置 -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+	<!-- 视图处理器  -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	
+	
+	
+	<!-- 开启spring-mvc注解 -->
+	<!--  
+	1.使用mvc:annotation-driven 加入mvc:argument-resolvers出错
+	Element 'mvc:annotation-driven' must have no character or element information item [children],
+	 because the type's content type is empty.
+	<mvc:annotation-driven>
+		 <mvc:argument-resolvers>
+        	<bean class="org.springframework.data.web.PageableArgumentResolver" />
+   		 </mvc:argument-resolvers>
+	</mvc:annotation-driven>
+	
+	2.
+	mvc:annotation-driven 和 定义DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter 不能同时使用
+	
+	
+	If you're using mvc:annotation-driven, 
+	you should not have DefaultAnnotationHandlerMapping or AnnotationMethodHandlerAdapter 
+	registered manually: this element registers them for you. 
+	参考来自 ：
+		http://forum.springsource.org/showthread.php?109306-org-springframework-beans-BeanInstantiationExcepti-on
+	
+	
+	<mvc:annotation-driven/>是一种简写形式，完全可以手动配置替代这种简写形式，简写形式可以让初学都快速应用默认配置方案。
+	<mvc:annotation-driven/>会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter两个bean,
+	是spring MVC为@Controllers分发请求所必须的。并提供了：数据绑定支持，@NumberFormatannotation支持，@DateTimeFormat支持，
+	@Valid支持，读写XML的支持（JAXB），读写JSON的支持（Jackson）。
+	参考来自：
+		http://www.mspring.org/post/2012/7/14/1344938579593.html
+	
+	
+	
+	3.查看doc
+	http://static.springsource.org/spring/docs/   具体可以查看xxx-SPR
+	-->
+	
+	
+	<!-- 处理器适配器 -->
+	<!-- 2.5-3.0 的写法 -->	
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="customArgumentResolvers">
+			<list>
+				<bean class="org.springframework.data.web.PageableArgumentResolver" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 3.1以后 -->
+	<!-- 木有找到怎么支持spring-data-jpa pageable -->
+	<!--  
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="customArgumentResolvers">
+			<list>
+				<bean class="org.springframework.web.method.support.HandlerMethodArgumentResolverComposite" />
+			</list>
+		</property>	
+	</bean>
+	-->
+
+
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+	  <property name="converters">
+	    <list>
+	      <bean class="org.springframework.data.repository.support.DomainClassConverter">
+	        <constructor-arg ref="conversionService" />
+	      </bean>
+	    </list>
+	  </property>
+	</bean>
+
+
+
+	
+	 
+	
+	
+	
+
+	
+
+
+	<!-- 
+		Spring3.0 支持 PropertyEditors,简化Controller 
+	 -->
+	<!-- 处理器适配器
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	  	<property name="webBindingInitializer">
+		    <bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+		      <property name="propertyEditorRegistrars">
+		        <bean class="org.springframework.data.repository.support.DomainClassPropertyEditorRegistrar" />
+		      </property>
+		    </bean>
+    	</property>	  
+	</bean>
+
+	-->
+
+	
+           
+</beans>

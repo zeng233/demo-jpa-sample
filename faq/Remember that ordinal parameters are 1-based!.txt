@@ -1,0 +1,12 @@
+
+意思就是少写一个参数
+
+例如当采用wrong 的书写格式时就会提示Remember that ordinal parameters are 1-based!
+UserDao
+right：
+	@Query("from User u where u.serial = :serial")
+	User findBySerial(@Param("serial") String serial);
+	
+wrong：	
+	@Query("from User u where u.serial = :serial")
+	User findBySerial(String serial);
