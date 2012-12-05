@@ -1,59 +1,62 @@
 
-------------------- Eclipse & Git github¿â --------------
+------------------- Eclipse & Git githubåº“ --------------
 
-1.°´ÕÕgithubÉÏµÄÖ¸ÄÏÅäÖÃ£¨http://help.github.com/win-set-up-git/£©»ù´¡µÄgit»·¾³¡£
+1.æŒ‰ç…§githubä¸Šçš„æŒ‡å—é…ç½®ï¼ˆhttp://help.github.com/win-set-up-git/ï¼‰åŸºç¡€çš„gitç¯å¢ƒã€‚
 
-2.ÔÚgithubÉÏ´´½¨Ò»¸öRepository¡£
+2.åœ¨githubä¸Šåˆ›å»ºä¸€ä¸ªRepositoryã€‚
 
-3.ÔÚEclipseÖĞÍ¨¹ı¡°Eclipse Marketplaces¡±£¬ÔÚMarket PlacesÀï°²×°egit¡£
+3.åœ¨Eclipseä¸­é€šè¿‡â€œEclipse Marketplacesâ€ï¼Œåœ¨Market Placesé‡Œå®‰è£…egitã€‚
 
-4.ÔÚEclipseÖĞÉúpublic key, ²¢Ìí¼Óµ½GitHub RepositoryÖĞ¡£
-EclipseÖĞÍ¨¹ı£ºperformance -> SSH2 -> Key Management -> Gernerate RSA Key Éú³É SSH µÄ public key¡£
-ÔÚGitHubÖĞÍ¨¹ı£ºedit your profile -> ssh key -> Add SSH Key Ìí¼ÓSSH Key, °ÑÉÏÃæÉú³ÉµÄ public key ¿½±´µ½ÕâÀï£¬±£´æ¡£
+4.åœ¨Eclipseä¸­ç”Ÿpublic key, å¹¶æ·»åŠ åˆ°GitHub Repositoryä¸­ã€‚
+Eclipseä¸­é€šè¿‡ï¼šperformance -> SSH2 -> Key Management -> Gernerate RSA Key ç”Ÿæˆ SSH çš„ public keyã€‚
+åœ¨GitHubä¸­é€šè¿‡ï¼šedit your profile -> ssh key -> Add SSH Key æ·»åŠ SSH Key, æŠŠä¸Šé¢ç”Ÿæˆçš„ public key æ‹·è´åˆ°è¿™é‡Œï¼Œä¿å­˜ã€‚
 
-5.EclipseÀïFile²Ëµ¥£¬Import£¬¼´¿É´Ógitµ¼Èë¸ÕÌí¼Óµ½gitµÄÏîÄ¿ÁË¡£
+5.Eclipseé‡ŒFileèœå•ï¼ŒImportï¼Œå³å¯ä»gitå¯¼å…¥åˆšæ·»åŠ åˆ°gitçš„é¡¹ç›®äº†ã€‚
 
-6.ĞŞ¸Ä£¬²¢Ìá½»¡£ÔÚÏîÄ¿ÉÏµãÓÒ¼ü¨C>team¨C>commit¡£commitÊÇcommitµ½±¾»úµÄgit¿â£¬¶øpush²ÅÊÇÍ¬²½µ½github¡£
-
-
-
-ÔÚgitÉÏ´´½¨RepositoryµÄ·½·¨
+6.ä¿®æ”¹ï¼Œå¹¶æäº¤ã€‚åœ¨é¡¹ç›®ä¸Šç‚¹å³é”®â€“>teamâ€“>commitã€‚commitæ˜¯commitåˆ°æœ¬æœºçš„gitåº“ï¼Œè€Œpushæ‰æ˜¯åŒæ­¥åˆ°githubã€‚
 
 
 
-------------------- Eclipse & Git ±¾µØ°æ±¾¿ØÖÆ ±¾µØgit¿â --------------
+åœ¨gitä¸Šåˆ›å»ºRepositoryçš„æ–¹æ³•
 
-Ä¿±ê.ÎÒÃÇÒª×öµÄ¾ÍÊÇ¶ÔEclipse±¾µØµÄÒ»¸öMavenÏîÄ¿½øĞĞGit°æ±¾¿ØÖÆ
-
-²¹³ä1,ÔÚ°²×°windows for git(msysGit)ºóÓĞ²¿·ÖÍ¬Ñ§»áÔËĞĞ $ git init£¬
-ÕâÑù×öµÄ½á¹û%USERPROFILE% ±ä³ÉÁËGit RepositoryÖĞµÄÒ»¸ö²Ö¿â,
-Ö®ºóTeam->Share Project->Git»áµ¼ÖÂ²»ÄÜCreate Repository,
-·´ÕıºÜÂé·³
+USB YOU ARE SB
 
 
+------------------- Eclipse & Git æœ¬åœ°ç‰ˆæœ¬æ§åˆ¶ æœ¬åœ°gitåº“ --------------
+
+ç›®æ ‡.æˆ‘ä»¬è¦åšçš„å°±æ˜¯å¯¹Eclipseæœ¬åœ°çš„ä¸€ä¸ªMavené¡¹ç›®è¿›è¡ŒGitç‰ˆæœ¬æ§åˆ¶
+
+è¡¥å……1,åœ¨å®‰è£…windows for git(msysGit)åæœ‰éƒ¨åˆ†åŒå­¦ä¼šè¿è¡Œ $ git initï¼Œ
+è¿™æ ·åšçš„ç»“æœ%USERPROFILE% å˜æˆäº†Git Repositoryä¸­çš„ä¸€ä¸ªä»“åº“,
+ä¹‹åTeam->Share Project->Gitä¼šå¯¼è‡´ä¸èƒ½Create Repository,
+åæ­£å¾ˆéº»çƒ¦
 
 
 
-1.Ê×ÏÈ°²×°windows for git(msysGit)
 
-2.EclipseµÄ°æ±¾ÊÇ4.2 JUNO,°²×°Egit plugin
 
-3.ÔÚ»·¾³±äÁ¿ÖĞÅäÖÃHOME = %USERPROFILE%    ¾Í×÷Õß¶øÑÔ %USERPROFILE%=C:\Users\xchen7129752.HGSTGLOBAL
+1.é¦–å…ˆå®‰è£…windows for git(msysGit)
 
-4.µ½Eclipse->preferences->Team->Git->Configuration
+2.Eclipseçš„ç‰ˆæœ¬æ˜¯4.2 JUNO,å®‰è£…Egit plugin
 
-ÅäÖÃ 	µÚ3²½£¬Èç¹û²»ÅäÖÃ»·¾³±äÁ¿HOME,Eclipse¾Í»áÌáÊ¾ÄãÅäÖÃ
-	3¸öÃæ°å  User Setting/System Setting/Repository Setting
-	×¢ÒâµÄÊÇRepository Setting »áÔÚÄã°ÑÏîÄ¿Ìá½»µ½Git RepositoryºóÏÔÊ¾(step 5)
+3.åœ¨ç¯å¢ƒå˜é‡ä¸­é…ç½®HOME = %USERPROFILE%    å°±ä½œè€…è€Œè¨€ %USERPROFILE%=C:\Users\xchen7129752.HGSTGLOBAL
 
-5 °ÑÏîÄ¿Ìá½»µ½Git Repository,Êó±êÓÒ¼üÏîÄ¿ Team->Share Project -> Git È»ºóCreate Repository
+4.åˆ°Eclipse->preferences->Team->Git->Configuration
 
-ÀıÈç
+é…ç½® 	ç¬¬3æ­¥ï¼Œå¦‚æœä¸é…ç½®ç¯å¢ƒå˜é‡HOME,Eclipseå°±ä¼šæç¤ºä½ é…ç½®
+	3ä¸ªé¢æ¿  User Setting/System Setting/Repository Setting
+	æ³¨æ„çš„æ˜¯Repository Setting ä¼šåœ¨ä½ æŠŠé¡¹ç›®æäº¤åˆ°Git Repositoryåæ˜¾ç¤º(step 5)
+
+5 æŠŠé¡¹ç›®æäº¤åˆ°Git Repository,é¼ æ ‡å³é”®é¡¹ç›® Team->Share Project -> Git ç„¶åCreate Repository
+
+ä¾‹å¦‚
 demo-hello  --- C:\Users\xchen7129752.HGSTGLOBAL\Workspaces\Eclipse4.2\demo-hello\.git
 
-6 Ìí¼ÓË÷Òı Team -> Add to index
-7 ÅÅ³ıÎÄ¼ş ¸ùÄ¿Â¼Ìí¼Ó .gitignore 
-8 Ìá½»     Team -> Submit
+6 æ·»åŠ ç´¢å¼• Team -> Add to index
+7 æ’é™¤æ–‡ä»¶ æ ¹ç›®å½•æ·»åŠ  .gitignore 
+8 æäº¤     Team -> Submit
+
+
 
 
 
