@@ -1,0 +1,8 @@
+git
+设置环境变量 %HOME% 为 %USERPROFILE%
+
+
+%HOME%  %USERPROFILE% 本应该指向 C:\Users\xchen7129752.HGSTGLOBAL
+但是
+%HOME% 指向 C:\Windows\system32\config\systemprofile
+%USERPROFILE% 指向 C:\Users\xchen7129752.HGSTGLOBAL
