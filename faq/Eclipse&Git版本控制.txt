@@ -19,7 +19,7 @@ Eclipse中通过：performance -> SSH2 -> Key Management -> Gernerate RSA Key �
 
 在git上创建Repository的方法
 
-USB YOU ARE SB
+USB YOU ARE SB~~~
 
 
 ------------------- Eclipse & Git 本地版本控制 本地git库 --------------
