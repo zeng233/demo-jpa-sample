@@ -13,22 +13,25 @@
 		<properties>
 			  
 			<!-- 连接信息 -->
+			<!--  
 			<property name="hibernate.dialect" value="org.hibernate.dialect.DB2Dialect" />
 			<property name="hibernate.connection.url" value="jdbc:db2:pes" />
 			<property name="hibernate.connection.driver_class" value="COM.ibm.db2.jdbc.app.DB2Driver" />
 			<property name="hibernate.connection.username" value="administrator" />
 			<property name="hibernate.connection.password" value="it6hspc" />
-			
+			-->
 			<!-- 设置数据库默认的schema -->
+			<!--
 			<property name="hibernate.default_schema" value="xchen7129752"></property>
-			
+			 --> 
 			
 			<!-- 怎么设置 
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" /> 
+			  <property name="hibernate.hbm2ddl.auto" value="update" /> 
 			-->
             <!--自动输出schema创建DDL语句 -->
             <property name="hibernate.max_fetch_depth" value="3" />
-            <property name="hibernate.hbm2ddl.auto" value="update" />    
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />    
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="javax.persistence.validation.mode" value="none"/>	

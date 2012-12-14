@@ -46,7 +46,7 @@ jdk1.6 , maven3 , git , eclipse
 			EGit
 			
 			Aptana Studio 3
-		
+			
 		
 
 

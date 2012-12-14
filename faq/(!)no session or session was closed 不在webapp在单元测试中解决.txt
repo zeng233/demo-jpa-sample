@@ -1,7 +1,7 @@
 
 
 
-	添加 @Transactional ，对事务什么的处理
+	添加 @Transactional ，对事务处理
 	
 	
 	@RunWith(SpringJUnit4ClassRunner.class)

@@ -1,0 +1,38 @@
+	在导入spring-data-jpa出现的几个maven蛋疼错误
+-----list
+		|Maven Project Build Lifecycle Mapping Problem 1	解决
+		|Maven Project Build Lifecycle Mapping Problem 2	未解决
+		
+第一个
+Plugin execution not covered by lifecycle configuration: 
+org.codehaus.mojo:build-helper-maven-plugin:1.5:add-source 
+(execution: add-source, phase: generate-sources) ... 
+
+
+how to play?>>
+It took me some time to figure out the right solution:
+Just install the “M2Extras / buildhelper” plugin!
+
+maven-> discovery - open catalog -> download a plugin named 'builder'
+
+
+第二个
+"Plugin execution not covered by lifecycle configuration: 
+com.springsource.bundlor:com.springsource.bundlor.maven:1.0.0.RELEASE:bundlor"
+(execution: bundlor, phase: process-classes)
+
+
+第三个
+You need to run build with JDK or have tools.jar on the classpath.
+If this occures during eclipse build make sure you run eclipse under JDK as well 
+(com.mysema.maven:maven-apt-
+
+我自己系统的环境变量classpath有设置tools，按照网上说的去maven-discovery-open catalog
+down maven-apt结果有个屌用~
+http://thesolidsnake.wordpress.com/tag/apt/
+
+第四个
+spring-data-jpa 里突然冒出个QAccount的类,尼玛我真是没找到、、、
+
+
+
